@@ -1,0 +1,158 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header-logo {
+  color: #2196f3;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.logo-part {
+  color: $title-text-color;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  margin-left: 93px;
+}
+
+.nav-item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.nav-link {
+  padding: 32px 0 32px 0;
+  display: flex;
+
+  transition: $time $cubic;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: $title-text-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.nav-link::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: $accent-color;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  top: 76px;
+  opacity: 0;
+  transition: $time $cubic;
+}
+
+.nav-link.current {
+  color: $accent-color;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    top: 76px;
+    opacity: 1;
+    transition: $time $cubic;
+  }
+}
+
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contact-item {
+  color: $footer-link-color;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:last-child {
+    margin-left: 50px;
+  }
+}
+
+.contact-link {
+  display: flex;
+  padding: 32px 0 32px 0;
+  align-items: center;
+
+  transition: $time $cubic;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: $primary-text-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contact-icon {
+  fill: $primary-text-color;
+  display: flex;
+  margin-right: 10px;
+  transition: $time $cubic;
+
+  .contact-link:hover &,
+  .contact-link:focus & {
+    fill: $accent-color;
+  }
+}
+
+.message {
+  width: 16px;
+  height: 12px;
+}
+
+.smartphone {
+  width: 10px;
+  height: 16px;
+}

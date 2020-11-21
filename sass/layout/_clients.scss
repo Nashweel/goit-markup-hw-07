@@ -1,0 +1,60 @@
+// ------------------Clients----------------
+
+.client {
+  padding: 94px 0;
+}
+
+.client-list {
+  display: flex;
+  flex-wrap: unset;
+}
+
+.client-title {
+  margin: 0 auto;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
+.client-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  width: 170px;
+  height: 90px;
+
+  transition: $time $cubic;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.client-icon {
+  display: flex;
+  fill: #afb1b8;
+  transition: $time $cubic;
+
+  .client-link:hover &,
+  .client-link:focus & {
+    fill: $accent-color;
+  }
+}
